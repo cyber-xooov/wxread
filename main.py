@@ -24,11 +24,11 @@ print("env_headers:", env_headers)
 
 method=os.getenv('PUSH_METHOD',None)
 env_cookies = os.getenv('WXREAD_COOKIES')
-READ_NUM = int(os.getenv('READ_NUM', 120))
+env_num = int(os.getenv('READ_NUM'))
 
 headers = json.loads(env_headers) if env_headers else local_headers
 cookies = json.loads(env_cookies) if env_cookies else local_cookies
-
+READ_NUM = env_num if env_num else 120
 
 def encode_data(data, keys_to_include=None):
     sorted_keys = sorted(data.keys())
