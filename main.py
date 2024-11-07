@@ -24,7 +24,7 @@ print("env_headers:", env_headers)
 
 method=os.getenv('PUSH_METHOD')
 env_cookies = os.getenv('WXREAD_COOKIES')
-READ_NUM = int(os.getenv('READ_NUM', 120))
+READ_NUM = int(os.getenv('READ_NUM', '120'))
 
 headers = json.loads(env_headers) if env_headers else local_headers
 cookies = json.loads(env_cookies) if env_cookies else local_cookies
