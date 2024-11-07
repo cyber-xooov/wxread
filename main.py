@@ -20,6 +20,8 @@ cookie_data = {"rq": "%2Fweb%2Fbook%2Fread"}
 # 从环境变量获取 headers、cookies以及READ_NUM(如果不存在使用默认本地值)
 # READ_NUM每一次代表30秒，比如你想刷1个小时这里填120，你只需要签到这里填2次
 env_headers = os.getenv('WXREAD_HEADERS')
+print("env_headers:", env_headers)
+
 method=os.getenv('PUSH_METHOD')
 env_cookies = os.getenv('WXREAD_COOKIES')
 READ_NUM = int(os.getenv('READ_NUM', 120))
