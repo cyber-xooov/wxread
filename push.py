@@ -67,4 +67,4 @@ def push(content, method, pushplus_token=None, telegram_bot_token=None, telegram
         return notifier.push_telegram(content, telegram_bot_token, telegram_chat_id)
     
     else:
-        raise ValueError("无效的通知渠道. 请选择 'pushplus' 或者 'telegram'")
+        raise ValueError("无效的通知渠道. 请选择 'pushplus' 或者 'telegram'"+method)
