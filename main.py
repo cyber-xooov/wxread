@@ -22,7 +22,7 @@ cookie_data = {"rq": "%2Fweb%2Fbook%2Fread"}
 env_headers = os.getenv('WXREAD_HEADERS')
 print("env_headers:", env_headers)
 
-method=os.getenv('PUSH_METHOD')
+method=os.getenv('PUSH_METHOD',None)
 env_cookies = os.getenv('WXREAD_COOKIES')
 READ_NUM = int(os.getenv('READ_NUM', 120))
 
