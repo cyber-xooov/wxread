@@ -101,6 +101,10 @@ def convert(curl_command):
         cookies[key] = value
 
     return headers, cookies
-
-
+log.info("修改前")
+log.info(headers)
+log.info(cookies)
 headers, cookies = convert(curl_str) if curl_str else (headers, cookies)
+log.info("修改后")
+log.info(headers)
+log.info(cookies)
